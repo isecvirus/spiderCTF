@@ -1,0 +1,127 @@
+@font-face {
+    font-family: "janna";
+    src: url("../fonts/Janna-LT/Janna\ LT\ Regular.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "janna";
+}
+
+body {
+    background-image: url("../images/bg.png");
+}
+
+*::selection {
+    background-color: rgba(255, 0, 0, 0.193);
+}
+
+.signup {
+    background-color: #ff000021;
+    width: 30%;
+    /* height: 50%; */
+    margin: 0 auto;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 15px;
+    padding: 10px;
+    border: 1px solid red;
+}
+
+.signup .title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup .title-container svg {
+    fill: #ff0000;
+    filter: drop-shadow(0 0 5px #ff0000a9);
+    width: 100px;
+    height: 75px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+}
+
+.signup .title-container .title {
+    background-color: transparent;
+    border: none;
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 35px;
+    color: #cfcfcf;
+    user-select: none;
+}
+
+.signup .data {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    padding: 10px;
+}
+
+.signup .data * {
+    margin: 10px;
+}
+
+.signup .data * {
+    padding: 10px;
+    text-align: right;
+    outline: none;
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    background-color: rgba(255, 0, 0, 0.1);
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 1px;
+    border-radius: 5px;
+}
+
+.signup .data *:focus {
+    border: 1px solid rgb(255, 0, 0);
+}
+
+.signup .data *::placeholder {
+    color: #ffffff37;
+    text-align: center;
+}
+
+.signup .data a {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-decoration: none;
+    width: fit-content;
+    color: #ffffff;
+    transition: 250ms;
+}
+.signup .data a:hover {
+    color: #ffffff92;
+}
+.signup .data a:focus {
+    border: none;
+}
+
+.signup .data option {
+    text-align: center;
+    color: #000;
+}
+
+.signup .signup-btn {
+    font-size: 15px;
+    cursor: pointer;
+    transition: 250ms;
+    border: none;
+    border: 1px solid transparent;
+    margin-top: 25px;
+}
+.signup .signup-btn:hover {
+    background-color: rgba(255, 0, 0, 0.15);
+    border: 1px solid red;
+}

@@ -1,0 +1,761 @@
+@font-face {
+    font-family: "janna";
+    src: url("../fonts/Janna-LT/Janna\ LT\ Regular.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("../images/bg.png");
+    font-family: "janna";
+}
+
+.student-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    margin: 50px 0 50px 0;
+}
+
+.student-details div {
+    margin: 10px;
+}
+
+.student-details .players-num-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid rgba(128, 128, 128, 0.25);
+    padding: 5px 5px 5px 15px;
+    border-radius: 10px;
+}
+
+.student-details .players-num-container .players-num {
+    color: #cfcfcf;
+    font-size: 25px;
+    margin-left: 10px;
+    user-select: none;
+}
+
+.student-details .players-num-container svg {
+    fill: #ff0000;
+    filter: drop-shadow(0 0 5px #ff0000a9);
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    background-color: #ff000021;
+    padding: 10px 10px 10px 10px;
+    margin-left: 25px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    transition: 250ms;
+}
+
+.student-details .players-num-container svg:hover {
+    border: 1px solid #ff0000;
+}
+
+/* ------------------------------------- */
+
+.student-details .banned-num-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid rgba(128, 128, 128, 0.25);
+    padding: 5px 5px 5px 15px;
+    border-radius: 10px;
+}
+
+.student-details .banned-num-container .banned-num {
+    color: #cfcfcf;
+    font-size: 25px;
+    margin-left: 10px;
+    user-select: none;
+}
+
+.student-details .banned-num-container svg {
+    fill: #ffd700;
+    filter: drop-shadow(0 0 5px #ffd700a9);
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    background-color: #ffd70021;
+    padding: 10px 10px 10px 10px;
+    margin-left: 25px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    transition: 250ms;
+}
+
+.student-details .banned-num-container svg:hover {
+    border: 1px solid #ffd700;
+}
+
+/* ------------------------------------- */
+
+.student-details .first-place-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid rgba(128, 128, 128, 0.25);
+    padding: 5px 5px 5px 15px;
+    border-radius: 10px;
+}
+
+.student-details .first-place-container .first-place {
+    color: #cfcfcf;
+    font-size: 25px;
+    margin-left: 10px;
+    user-select: none;
+}
+
+.student-details .first-place-container svg {
+    fill: #0080ff;
+    filter: drop-shadow(0 0 5px #0080ffa9);
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    background-color: #0080ff21;
+    padding: 10px 10px 10px 10px;
+    margin-left: 25px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    transition: 250ms;
+}
+
+.student-details .first-place-container svg:hover {
+    border: 1px solid #0080ff;
+}
+
+/* ------------------------------------- */
+
+.student-details .last-signup-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid rgba(128, 128, 128, 0.25);
+    padding: 5px 5px 5px 15px;
+    border-radius: 10px;
+}
+
+.student-details .last-signup-container .last-signup {
+    color: #cfcfcf;
+    font-size: 25px;
+    margin-left: 10px;
+    user-select: none;
+}
+
+.student-details .last-signup-container svg {
+    fill: #8800ff;
+    filter: drop-shadow(0 0 5px #8800ffa9);
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    background-color: #8800ff21;
+    padding: 10px 10px 10px 10px;
+    margin-left: 25px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    transition: 250ms;
+}
+
+.student-details .last-signup-container svg:hover {
+    border: 1px solid #8800ff;
+}
+
+/* ------------------------------------- */
+
+.student-details .time-left-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid rgba(128, 128, 128, 0.25);
+    padding: 5px 5px 5px 15px;
+    border-radius: 10px;
+}
+
+.student-details .time-left-container .time-left {
+    color: #cfcfcf;
+    font-size: 25px;
+    margin-left: 10px;
+    user-select: none;
+}
+
+.student-details .time-left-container svg {
+    fill: #555555;
+    filter: drop-shadow(0 0 5px #333333a9);
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    background-color: #22222221;
+    padding: 10px 10px 10px 10px;
+    margin-left: 25px;
+    border-radius: 10px;
+    border: 1px solid #555555;
+    transition: 250ms;
+}
+
+
+/* ------------------------------------- */
+
+.student-details .safe-data-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: none;
+    /* padding: 5px 5px 5px 5px; */
+    border-radius: 10px;
+}
+
+.student-details .safe-data-container svg {
+    fill: #00ffff;
+    filter: drop-shadow(0 0 5px #00ffffa9);
+    width: 30px;
+    height: 30px;
+    background-color: #00ffff21;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: 250ms;
+}
+
+.student-details .safe-data-container svg:hover {
+    border: 1px solid #00ffff;
+}
+
+.student-details .safe-data-container svg[safe] {
+    fill: #000000;
+    background-color: #00ffff;
+}
+
+/* ------------------------------------- */
+
+.student-details .auto-update-players-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: none;
+    /* padding: 5px 5px 5px 5px; */
+    border-radius: 10px;
+}
+
+.student-details .auto-update-players-container svg {
+    fill: #BC2E26;
+    filter: drop-shadow(0 0 5px #BC2E26);
+    width: 30px;
+    height: 30px;
+    background-color: #BC2E2621;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: 250ms;
+}
+
+.student-details .auto-update-players-container svg:hover {
+    border: 1px solid #BC2E26;
+}
+
+.student-details .auto-update-players-container svg:active {
+    fill: #000000;
+    background-color: #BC2E26;
+}
+
+
+.student-details .auto-update-players-container svg[automate] {
+    fill: #000000;
+    background-color: #BC2E26;
+    animation: automate 1s linear infinite;
+}
+
+@keyframes automate {
+
+    0%,
+    100% {
+        border: 1px solid transparent;
+    }
+
+    50% {
+        border: 1px solid #cfcfcf;
+    }
+}
+
+/* ------------------------------------- */
+
+.student-details .save-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: none;
+    /* padding: 5px 5px 5px 5px; */
+    border-radius: 10px;
+}
+
+.student-details .save-container svg {
+    fill: #DD804A;
+    filter: drop-shadow(0 0 5px #DD804Aa9);
+    width: 30px;
+    height: 30px;
+    background-color: #DD804A21;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: 250ms;
+}
+
+.student-details .save-container svg:hover {
+    border: 1px solid #DD804A;
+}
+
+.student-details .save-container svg:active {
+    fill: #000000;
+    background-color: #DD804A;
+}
+
+
+/* ------------------------------------- */
+
+.student-details .fetch-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: none;
+    /* padding: 5px 5px 5px 5px; */
+    border-radius: 10px;
+}
+
+.student-details .fetch-container svg {
+    fill: #EFFFA1;
+    filter: drop-shadow(0 0 5px #EFFFA1a9);
+    width: 30px;
+    height: 30px;
+    background-color: #EFFFA121;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: 250ms;
+}
+
+.student-details .fetch-container svg:hover {
+    border: 1px solid #EFFFA1;
+}
+
+.student-details .fetch-container svg:active {
+    fill: #000000;
+    background-color: #EFFFA1;
+}
+
+
+/* ------------------------------------- */
+
+.student-details .upload-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: none;
+    /* padding: 5px 5px 5px 5px; */
+    border-radius: 10px;
+}
+
+.student-details .upload-container svg {
+    fill: #E52B64;
+    filter: drop-shadow(0 0 5px #E52B64a9);
+    width: 30px;
+    height: 30px;
+    background-color: #E52B6421;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: 250ms;
+}
+
+.student-details .upload-container svg:hover {
+    border: 1px solid #E52B64;
+}
+
+.student-details .upload-container svg:active {
+    fill: #000000;
+    background-color: #E52B64;
+}
+
+
+/* ------------------------------------- */
+
+.student-details .suspend-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: none;
+    /* padding: 5px 5px 5px 5px; */
+    border-radius: 10px;
+}
+
+.student-details .suspend-container svg {
+    fill: #b8dfff;
+    filter: drop-shadow(0 0 5px #b8dfffa9);
+    width: 30px;
+    height: 30px;
+    background-color: #b8dfff21;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: 250ms;
+}
+
+.student-details .suspend-container svg:hover {
+    border: 1px solid #b8dfff;
+}
+
+.student-details .suspend-container svg:active {
+    fill: #000000;
+    background-color: #b8dfff;
+}
+
+.student-details .suspend-container svg[suspended] {
+    fill: #000000;
+    background-color: #b8dfff;
+}
+
+
+
+/* ------------------------------------- */
+
+.student-details .logout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.student-details .logout svg {
+    fill: #cfcfcf;
+    filter: drop-shadow(0 0 5px #cfcfcfa9);
+    width: 30px;
+    height: 30px;
+    background-color: #cfcfcf21;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transform: rotate(180deg);
+    transition: 250ms;
+}
+
+.student-details .logout svg:hover {
+    border: 1px solid #cfcfcf;
+    fill: #000000;
+    background-color: #cfcfcf;
+}
+
+
+/* ------------------------------------- */
+
+table th,
+table td {
+    padding: 15px;
+
+}
+
+.players-table {
+    height: 100%;
+}
+
+.players-table table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+
+}
+
+.players-table table .content-container {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    height: 250px;
+    flex-grow: 1;
+}
+
+.players-table table .table-header {
+    background-color: #ff000050;
+}
+
+
+.players-table table tr {
+    color: #cfcfcf;
+    text-align: center;
+    user-select: none;
+}
+
+.players-table table tr td {
+    color: #cfcfcf;
+    text-align: center;
+}
+
+.players-table table .player-row {
+    background-color: #ff000021;
+}
+
+.players-table table .player-row .controller {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.players-table table .player-row .controller button {
+    padding: 5px;
+    background-color: var(--bg);
+    fill: var(--fg);
+    width: 32px;
+    height: 32px;
+    border-radius: 5px;
+    border: 1px solid var(--fg);
+    cursor: pointer;
+    user-select: none;
+    outline: none;
+    transition: 250ms;
+}
+
+.players-table table .player-row .controller button[banned] {
+    background-color: #ffd700;
+    fill: #000000;
+}
+
+.players-table table .player-row .controller button[loggedout] {
+    background-color: #8800ff;
+    fill: #000000;
+}
+
+.players-table table .player-row .controller button:disabled {
+    pointer-events: none;
+    border: 1px solid transparent;
+    background-color: #222222a4;
+    fill: #333333;
+}
+
+.players-table table .player-row .controller button:hover {
+    background-color: var(--fg);
+    fill: #000000;
+}
+
+.players-table table .player-row .controller button:active {
+    background-color: var(--bg);
+    fill: var(--fg);
+    transition: 250ms;
+}
+
+.username[safe],
+.email[safe],
+.ip[safe] {
+    filter: blur(9px);
+    user-select: none;
+}
+
+/* Hide the scrollbars but allow scrolling */
+* {
+    overflow: auto;
+    scrollbar-width: thin;
+    /* For Firefox */
+    -ms-overflow-style: none;
+    /* For Internet Explorer and Edge */
+}
+
+/* Hide the scrollbar track */
+*::-webkit-scrollbar {
+    width: 0.5em;
+    /* Adjust the width as needed */
+}
+
+/* Hide the scrollbar thumb */
+*::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+.close-upload-window {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    fill: #ff00ff;
+    top: 20px;
+    left: 10px;
+    background-color: #ff00ff21;
+    padding: 5px;
+    border: 1px solid #ff00ff;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: 250ms;
+}
+
+.close-upload-window[disabled] {
+    pointer-events: none;
+}
+.close-upload-window:hover {
+    fill: #000000;
+    background-color: #ff00ff;
+}
+
+.close-upload-window:active {
+    fill: #ff00ff;
+    background-color: #ff00ff21;
+}
+
+.upload-window {
+    width: 100%;
+    height: 100%;
+    background-color: #9c009c50;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.upload-window[showing=yes] {
+    display: block;
+}
+.upload-window[showing=no] {
+    display: none;
+}
+
+.upload-progress {
+    width: 100%;
+    border-radius: 0;
+    height: 10px;
+    background-color: #ff00ff;
+}
+
+.upload-progress {
+    border-radius: 0;
+    width: 100%;
+    height: 5px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    border: 0;
+}
+
+.upload-progress::-webkit-progress-bar {
+    background-color: #880088;
+    border-radius: 0;
+}
+
+.upload-progress::-webkit-progress-value {
+    background-color: #ff00ff;
+}
+
+.upload-window .window {
+    background-color: #6211625d;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* position: fixed; */
+    /* left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); */
+}
+
+.upload-window .window .files {
+    background-color: #6211625d;
+    table-layout: fixed;
+    flex-direction: column;
+    text-align: center;
+    color: #cfcfcf;
+    /* position: fixed; */
+    overflow: auto;
+    width: 100%;
+}
+
+
+.upload-window .window .files tbody:hover {
+    /* background-color: #c533206b; */
+}
+
+.upload-window .window .files thead {
+    background-color: #621162;
+}
+
+.upload-window .window .files table {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+
+
+.delete-upload {
+    fill: #cfcfcf;
+    border: 1px solid #cfcfcf;
+    background-color: #cfcfcf21;
+    filter: drop-shadow(0 0 5px #cfcfcfa9);
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 250ms;
+}
+
+.delete-upload:hover {
+    fill: #621162;
+    background-color: #cfcfcf;
+}
+
+.window .upload-new {
+    height: fit-content;
+    width: fit-content;
+}
+
+#filechoose {
+    margin-left: 10px;
+    color: #cfcfcf;
+    width: 100%;
+}
+
+
+.file-control-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.file-control-container form {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+
+.file-control-container .fileupload-btn {
+    padding: 15px;
+    width: 10%;
+    border: none;
+    background-color: #621162;
+    color: #cfcfcf;
+    cursor: pointer;
+    user-select: none;
+}
+
+.file-control-container .fileupload-btn:hover {
+    background-color: #621162b3;
+}
+
+.file-control-container .fileupload-btn[uploading] {
+    pointer-events: none;
+    background-color: #433443;
+}

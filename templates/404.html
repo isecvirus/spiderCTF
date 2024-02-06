@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/404.css') }}">
+        <link rel="icon" href="{{ url_for('static', filename='images/v.png') }}">
+        <title>spiderCTF</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <span class="c404">404</span>
+            <span class="msg">Page not found</span>
+            <form action="{{ url_for('index') }}" method="get">
+                <button class="back">Go back</button>
+            </form>
+        </div>
+    </body>
+
+</html>

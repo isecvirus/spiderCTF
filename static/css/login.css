@@ -1,0 +1,131 @@
+@font-face {
+    font-family: "janna";
+    src: url("../fonts/Janna-LT/Janna\ LT\ Regular.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "janna";
+}
+
+body {
+    background-image: url("../images/bg.png");
+}
+
+*::selection {
+    background-color: rgba(255, 0, 0, 0.05);
+}
+
+.login {
+    background-color: #ff000021;
+    width: 30%;
+    /* height: 50%; */
+    margin: 0 auto;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 15px;
+    padding: 10px;
+    border: 1px solid red;
+}
+
+.login .title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login .title-container svg {
+    fill: #ff0000;
+    filter: drop-shadow(0 0 5px #ff0000a9);
+    width: 100px;
+    height: 75px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+}
+
+.login .title-container .title {
+    background-color: transparent;
+    border: none;
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 35px;
+    color: #cfcfcf;
+    user-select: none;
+}
+
+.login .data {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    padding: 10px;
+}
+
+.login .login-msg {
+    user-select: none;
+}
+
+.login .data * {
+    margin: 10px;
+}
+
+.login .data * {
+    padding: 10px;
+    text-align: right;
+    outline: none;
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    background-color: rgba(255, 0, 0, 0.1);
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 1px;
+    border-radius: 5px;
+}
+
+.login .data *:focus {
+    border: 1px solid rgb(255, 0, 0);
+}
+
+.login .data *::placeholder {
+    color: #ffffff37;
+    text-align: center;
+}
+
+.login .data a {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-decoration: none;
+    width: fit-content;
+    color: #ffffff;
+    transition: 250ms;
+}
+.login .data a:hover {
+    color: #ffffff92;
+}
+.login .data a:focus {
+    border: none;
+}
+
+.login .data .level option {
+    text-align: center;
+    color: #000;
+}
+
+.login .login-btn {
+    font-size: 15px;
+    cursor: pointer;
+    transition: 250ms;
+    border: none;
+    border: 1px solid transparent;
+    margin-top: 25px;
+}
+.login .login-btn:hover {
+    background-color: rgba(255, 0, 0, 0.15);
+    border: 1px solid red;
+}

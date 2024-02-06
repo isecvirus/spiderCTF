@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="{{ url_for('static', filename='js/confetti.browser.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/certificate.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/certificate.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/v.png') }}">
+    <title>spiderCTF | Certificate</title>
+</head>
+
+<body>
+    <div class="view">
+        <span>Certificate title message</span>
+        {% if email %}
+            <span class="email">{{ email }}</span>
+        {% else %}
+            <button class="download-certificate">Download</button>
+        {% endelse %}
+
+        <p>Note (e.g. make sure to logout)</p>
+
+        <div class="feedback-container">
+            <span class="feedback-title">[ Your feedback ]</span>
+            <span style="margin-top: 0;" class="feedback-title">[ Maximum of 1000 letters ]</span>
+            <textarea maxlength="1000" name="feedback" class="feedback" cols="50" rows="5"></textarea>
+            <button onclick="sendFeedback()" class="submit-feedback">Send</button>
+        </div>
+    </div>
+
+    <img class="spongebob" src="{{ url_for('static', filename='images/gif/spongebob.gif') }}" alt="spongebob">
+</body>
+</html>

@@ -1,0 +1,111 @@
+@font-face {
+    font-family: "janna";
+    src: url("../fonts/Janna-LT/Janna\ LT\ Regular.ttf");
+}
+
+body {
+    background-image: url("../images/bg.png");
+    font-family: "janna";
+}
+
+.view {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    max-width: 50%;
+    margin: 0 auto;
+    z-index: -99;
+}
+
+.feedback-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    margin-top: 75px;
+}
+
+span {
+    padding: 10px;
+    font-size: 30px;
+    color: #cfcfcf;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    transition: 250ms;
+}
+
+.email {
+    font-size: 35px;
+}
+
+p {
+    color: #cfcfcf;
+    background-color: #ff000072;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 5px 15px 5px 15px;
+    border-radius: 10px;
+    user-select: none;
+    margin-top: 25px;
+}
+
+.spongebob {
+    position: fixed;
+    bottom: 0;
+    left: 5%;
+    width: 128px;
+    height: 128px;
+    pointer-events: none;
+}
+
+.feedback-title {
+    font-size: 17px;
+    /* margin-top: 50px; */
+    margin-bottom: 0;
+    padding: 5px;
+}
+
+.feedback {
+    background-color: #ff000052;
+    border: 1px solid #ff000072;
+    resize: horizontal;
+    font-family: "janna";
+    outline: none;
+    padding: 10px;
+    color: #cfcfcf;
+    word-wrap: break-word;
+    word-break: keep-all;
+    text-wrap: pretty;
+    border-radius: 5px;
+}
+
+.feedback-container {
+    display: flex;
+    /* position: absolute; */
+    bottom: 0;
+}
+
+.submit-feedback {
+    width: 100px;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #ff00006d;
+    border: 1px solid #ff000072;
+    color: #cfcfcf;
+    border-radius: 5px;
+    font-family: "janna";
+    cursor: pointer;
+}
+.submit-feedback:hover {
+    color: #000000;
+    background-color: #ff0000;
+}

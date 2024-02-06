@@ -1,0 +1,67 @@
+@font-face {
+    font-family: "janna";
+    src: url("../fonts/Janna-LT/Janna\ LT\ Regular.ttf");
+}
+
+@font-face {
+    font-family: "fight";
+    src: url("../fonts/fighting_spirit_tbs/Fighting\ Spirit\ 2.otf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "janna";
+}
+
+body {
+    background-image: url("../images/bg.png");
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container .c404 {
+    font-size: 300px;
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+    font-family: "fight";
+    text-shadow: -1px -1px 0 #00FFFF , 1px 1px 0 #FF00FF;
+    user-select: none;
+}
+
+
+.container .msg {
+    text-align: center;
+    text-wrap: nowrap;
+    font-size: 50px;
+    text-shadow: -1px -1px 0 #00FFFF , 1px 1px 0 #FF00FF;
+    color: #cfcfcf;
+    user-select: none;
+}
+
+.container .back {
+    text-align: center;
+    text-wrap: nowrap;
+    font-size: 25px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 0, 0, 0.566);
+    padding: 5px 15px 5px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #cfcfcf;
+    margin-top: 25px;
+    transition: 250ms;
+}
+.back:hover {
+    border: 1px solid rgb(192, 11, 11);
+    background-color: rgb(192, 11, 11);
+}

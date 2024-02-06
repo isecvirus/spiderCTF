@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/signup.css') }}">
+    <script src="{{ url_for('static', filename='js/signup.js') }}" defer></script>
+    <link rel="icon" href="{{ url_for('static', filename='images/v.png') }}">
+    <title>spiderCTF | Signup</title>
+</head>
+
+<body>
+
+    <div class="signup">
+        <div class="title-container">
+            <svg xmlns="http://www.w3.org/2000/svg" height="16" width="18" viewBox="0 0 576 512">
+                <path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm80 256h64c44.2 0 80 35.8 80 80c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16c0-44.2 35.8-80 80-80zm-32-96a64 64 0 1 1 128 0 64 64 0 1 1 -128 0zm256-32H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16z" />
+            </svg>
+            <span class="title">Signup</span>
+        </div>
+        <form action="{{ url_for('signup') }}" method="post" class="data">
+            <!-- Name --><input type="text" class="name" name="name" placeholder="Name" required>
+            <!-- Email --><input dir="ltr" type="email" class="email" name="email" placeholder="E-mail" required>
+            <!-- Username --><input max="8" dir="ltr" pattern="[A-Za-z0-9_\.]+" oninput="preventInvalidChars(event)" type="text" class="username" name="username" placeholder="Username" required>
+            <!-- Password --><input dir="ltr" type="password" class="password" name="password" id="password" placeholder="Password" required>
+
+            <!-- Operating System -->
+            <select name="os" id="os" class="os" required>
+                <option disabled value="" selected>Operating System</option>
+                <option value="unknwon">UNKNOWN</option>
+                <option value="kali">Kali</option>
+                <option value="ubuntu">Ubuntu</option>
+                <option value="debian">Debian</option>
+                <option value="wsl">WSL</option>
+                <option value="debian">Windows</option>
+                <option value="else">ELSE</option>
+            </select>
+
+            <!-- Level -->
+            <select name="level" id="level" class="level" required>
+                <option disabled value="" selected>Experience</option>
+                <option value="unknwon">Unknown</option>
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+            </select>
+
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <span class="login-msg">{{ message }}</span>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+
+            <button class="signup-btn">Signup</button>
+
+            <a href="{{ url_for('login') }}" class="login-btn">Have an account?</a>
+        </form>
+    </div>
+
+</body>
+
+</html>

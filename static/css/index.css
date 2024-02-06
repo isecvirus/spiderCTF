@@ -1,0 +1,620 @@
+@font-face {
+    font-family: "janna";
+    src: url("../fonts/Janna-LT/Janna\ LT\ Regular.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "janna";
+}
+
+body {
+    background-image: url("../images/bg.png");
+}
+
+*::selection {
+    background-color: rgba(255, 0, 0, 0.193);
+}
+
+.challenge {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    height: 25%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+
+.challenge .points {
+    color: #cfcfcf;
+    border: 1px solid #cfcfcf;
+    width: 50px;
+    padding: 0 20px 0 20px;
+    font-weight: bolder;
+    background-color: #cfcfcf1c;
+    filter: drop-shadow(0 0 20px #cfcfcf);
+    border-radius: 100px;
+    font-size: 50px;
+    text-align: center;
+    user-select: none;
+    cursor: default;
+    transition: 500ms;
+}
+.challenge .points:hover {
+    filter: drop-shadow(0 0 20px #f00);
+    border: 1px solid #f00;
+    background-color: #ff00001c;
+    color: #f00;
+}
+
+.challenge .chal-name {
+    color: #cfcfcf;
+    font-size: 50px;
+    margin-top: 15px;
+    text-align: center;
+    word-break: keep-all;
+    text-wrap: nowrap;
+    text-shadow: -1px -1px 0 #00FFFF , 1px 1px 0 #FF00FF;
+}
+
+.challenge .description {
+    color: #cfcfcf;
+    margin-bottom: 50px;
+    font-size: 20px;
+    text-align: center;
+    max-width: 450px;
+}
+
+.challenge .file-size {
+    font-size: 15px;
+    color: #cfcfcf;
+    user-select: none;
+}
+
+.challenge .download {
+    background-color: rgba(255, 0, 0, 0.25);
+    border: 1px solid rgba(255, 0, 0, 0.5);
+    border-radius: 5px;
+    width: fit-content;
+    padding: 5px 25px 5px 25px;
+    height: fit-content;
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 15px;
+    text-decoration: none;
+    transition: 250ms;
+}
+
+.challenge .download:hover {
+    /* box-shadow: 0 0px 15px 0px red; */
+    /* border: 1px solid #ff0000; */
+    animation: btn-shake .1s infinite linear;
+}
+
+.challenge .download[href=""] {
+    color: rgb(128, 128, 128);
+    background-color: rgba(128, 128, 128, 0.25);
+    border: 1px solid rgba(128, 128, 128, 0.5);
+    pointer-events: none;
+}
+
+@keyframes btn-shake {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(3deg);
+    }
+
+    50% {
+        transform: rotate(-3deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+.student-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    margin: 15px;
+}
+
+/* --------------------- Name ------------------------  */
+
+.student-details .name-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid rgba(128, 128, 128, 0.25);
+    padding: 5px 5px 5px 15px;
+    border-radius: 10px;
+}
+
+.student-details .name-container .name {
+    color: #cfcfcf;
+    font-size: 25px;
+    margin-left: 10px;
+    user-select: none;
+}
+
+.student-details .name-container svg {
+    fill: rgb(255, 0, 0);
+    filter: drop-shadow(0 0 5px rgba(255, 0, 0, 0.661));
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    background-color: #ff000021;
+    padding: 10px 10px 10px 10px;
+    margin-left: 25px;
+    border-radius: 10px;
+}
+
+/* --------------------- Rank ------------------------  */
+
+.student-details .rank-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid rgba(128, 128, 128, 0.25);
+    padding: 5px 5px 5px 15px;
+    border-radius: 10px;
+}
+
+.student-details .rank-container .rank {
+    color: #cfcfcf;
+    font-size: 25px;
+    margin-left: 10px;
+    user-select: none;
+    font-weight: bolder;
+}
+
+.student-details .rank-container svg {
+    fill: #ffd700;
+    filter: drop-shadow(0 0 5px #ffd700a9);
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    background-color: #ffd70021;
+    padding: 10px 10px 10px 10px;
+    margin-left: 25px;
+    border-radius: 10px;
+}
+
+/* ------------------ Completion ---------------------  */
+
+.student-details .completion-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid rgba(128, 128, 128, 0.25);
+    padding: 5px 5px 5px 15px;
+    border-radius: 10px;
+}
+
+.student-details .completion-container .total {
+    color: #cfcfcf;
+    font-size: 25px;
+    margin-left: 10px;
+    user-select: none;
+    font-weight: bolder;
+}
+
+.student-details .completion-container svg {
+    fill: #0080ff;
+    filter: drop-shadow(0 0 5px #0080ffa9);
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    background-color: #0080ff21;
+    padding: 10px 10px 10px 10px;
+    margin-left: 25px;
+    border-radius: 10px;
+}
+
+/* --------------------- Point -----------------------  */
+
+.student-details .points-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid rgba(128, 128, 128, 0.25);
+    padding: 5px 5px 5px 15px;
+    border-radius: 10px;
+}
+
+.student-details .points-container .overall-points {
+    color: #cfcfcf;
+    font-size: 25px;
+    margin-left: 10px;
+    user-select: none;
+    font-weight: bolder;
+}
+
+.student-details .points-container svg {
+    fill: #8800ff;
+    filter: drop-shadow(0 0 5px #8800ffa9);
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    background-color: #8800ff21;
+    padding: 10px 10px 10px 10px;
+    margin-left: 25px;
+    border-radius: 10px;
+}
+
+
+/* --------------------- Point -----------------------  */
+
+.student-details .reward-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid rgba(128, 128, 128, 0.25);
+    padding: 5px 5px 5px 15px;
+    border-radius: 10px;
+}
+
+.student-details .reward-container .rewarded {
+    color: #cfcfcf;
+    font-size: 25px;
+    margin-left: 10px;
+    user-select: none;
+    font-weight: bolder;
+}
+
+.student-details .reward-container svg {
+    fill: #148D51;
+    filter: drop-shadow(0 0 5px #148D51aa);
+    background-color: #148D5121;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    padding: 10px 10px 10px 10px;
+    margin-left: 25px;
+    border-radius: 10px;
+}
+
+
+/* --------------------- Session ------------------------  */
+
+.logout {
+    text-decoration: none;
+    background-color: #008000;
+    display: contents;
+}
+.logout svg {
+    fill: #cfcfcf;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #cfcfcf;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #cfcfcf21;
+    filter: drop-shadow(0 0 5px #ffffffaa);
+    cursor: pointer;
+    transition: 250ms;
+}
+
+.logout svg:hover {
+    filter: drop-shadow(0 0 7.5px #ffffffaa);
+}
+
+.my-github {
+    position: absolute;
+    width: 86px;
+    left: 32px;
+    bottom: 32px;
+    filter: drop-shadow(0 0 5px #ff0000a9);
+    animation: spider-glow 1s infinite linear;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+@keyframes spider-glow {
+    0% {
+        filter: drop-shadow(0 0 5px #ff0000a9);
+    }
+    50% {
+        filter: drop-shadow(0 0 10px #ff0000a9);
+    }
+    100% {
+        filter: drop-shadow(0 0 5px #ff0000a9);
+    }
+}
+
+.challenge .flag-submit {
+    background-color: transparent;
+    margin-top: 50px;
+    border-radius: 10px;
+    border-top-right-radius: none;
+    border-bottom-right-radius: none;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+}
+
+.challenge .flag-submit .flag-input-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.challenge .flag-submit .flag {
+    text-align: left;
+    direction: ltr;
+    color: #cfcfcf;
+    font-size: 15px;
+    padding: 10px;
+    width: 75%;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid #cfcfcf;
+    /* border-right: none; */
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.challenge .flag-submit .flag-message {
+    user-select: none;
+    pointer-events: none;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 15px;
+    transition: 500ms;
+}
+
+.challenge .flag-submit .flag::placeholder {
+    color: rgba(207, 207, 207, 0.5);
+    text-align: center;
+}
+
+.challenge .flag-submit .submit {
+    width: 40px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: #fff;
+    border: 1px solid #cfcfcf;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    /* border-left: none; */
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: 250ms;
+}
+.challenge .flag-submit .submit:hover {
+    background-color: #cfcfcf76;
+}
+
+.challenge .flag-submit .submit:hover svg {
+    animation: arrow-morph /* time */ 1s /* delay*/ 250ms infinite linear;
+}
+
+@keyframes arrow-morph {
+    0%, 100% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+}
+
+.hints span {
+    color: #cfcfcf;
+}
+
+.reward {
+    fill: #148D51;
+    border: 1px solid #148D51;
+    filter: drop-shadow(0 0 5px #148D51aa);
+    background-color: #148D5121;
+    border-radius: 10px;
+    width: 32px;
+    height: 32px;
+    padding: 5px;
+    margin-bottom: 10px;
+    animation: reward 10s infinite linear;
+    transition: 500ms;
+}
+
+.reward-span {
+    color: #148D51;
+    text-align: center;
+    user-select: none;
+}
+
+@keyframes reward {
+    0%, 100% {
+        transform: rotateY(0);
+    }
+    50% {
+        transform: rotateY(360deg);
+    }
+}
+
+.downloads {
+    fill: #E52B64;
+    filter: drop-shadow(0 0 5px #E52B64a9);
+    width: 30px;
+    height: 30px;
+    background-color: #E52B6421;
+    padding: 7px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: 250ms;
+}
+
+.downloads:hover {
+    border: 1px solid #E52B64;
+}
+
+.downloads:active {
+    fill: #000000;
+    background-color: #E52B64;
+}
+
+.player-control-container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 32px;
+    bottom: 20px;
+
+}
+
+.close-download-window {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    fill: #ff00ff;
+    top: 20px;
+    right: 20px;
+    background-color: #ff00ff21;
+    padding: 5px;
+    border: 1px solid #ff00ff;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: 250ms;
+}
+
+.close-download-window[disabled] {
+    pointer-events: none;
+}
+.close-download-window:hover {
+    fill: #000000;
+    background-color: #ff00ff;
+}
+
+.close-download-window:active {
+    fill: #ff00ff;
+    background-color: #ff00ff21;
+}
+
+.download-window {
+    width: 100%;
+    height: 100%;
+    background-color: #9c009c50;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+}
+
+.download-window[showing=yes] {
+    display: block;
+}
+.download-window[showing=no] {
+    display: none;
+}
+
+.download-window .window {
+    background-color: #6211625d;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* position: fixed; */
+    /* left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); */
+}
+
+.download-window .window .files {
+    background-color: #6211625d;
+    table-layout: fixed;
+    flex-direction: column;
+    text-align: center;
+    color: #cfcfcf;
+    /* position: fixed; */
+    overflow: auto;
+    width: 100%;
+}
+
+.download-window .window .files tbody {
+    align-items: center;
+}
+
+.download-window .window .files tbody:hover {
+    background-color: #6211626b;
+}
+
+.download-window .window .files thead {
+    background-color: #621162;
+}
+
+.download-window .window .files table {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.download-btn svg {
+    fill: #cfcfcf;
+    border: 1px solid #cfcfcf;
+    background-color: #cfcfcf21;
+    filter: drop-shadow(0 0 5px #cfcfcfa9);
+    padding: 5px;
+    width: 16px;
+    height: 16px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 250ms;
+}
+
+.download-btn svg:hover {
+    fill: #621162;
+    background-color: #cfcfcf;
+}
+
+footer div {
+    display: flex;
+    user-select: none;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-bottom: 5px;
+    width: fit-content;
+}
+
+.fence, .gate {
+    color: red;
+}
+
+.gate {
+    margin: 0 10px 0 10px;
+}
+
+.traffic {
+    color: #cfcfcf;
+}
