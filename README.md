@@ -1,6 +1,7 @@
 # spiderCTF
 spiderCTF is a CTF management system for college/school hacking events
 
+### challenges format in challenges.json:
 ```json
 {
     "Challenge id e.g. 00000000-0000-0000-0000-000000000000": {
@@ -15,4 +16,15 @@ spiderCTF is a CTF management system for college/school hacking events
         "note": "Note for admin"
     }
 }
+```
+
+### flask python server:
+```bash
+pip3 install flask
+pip3 install psutil
+```
+
+### running the server:
+```bash
+python3 server.py
 ```
