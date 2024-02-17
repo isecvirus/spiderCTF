@@ -9,7 +9,7 @@ spiderCTF is a CTF management system for college/school hacking events
         "name": "Challenge title",
         "description": "Challenge description",
         "points": 0,
-        "attachment": ["path/to/file.any or null for no attachments"],
+        "attachment": "path/to/file.any or null for no attachment",
         "flag": "The challenge flag, can be empty or in any form even if differ from other challeneges",
         "reward": 0,
         "hints": ["Not working for v1.0.0"],
